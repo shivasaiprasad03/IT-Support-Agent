@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card">
+    <h2>Dashboard</h2>
+    <p><strong>Total Users:</strong> {{ total_users }}</p>
+</section>
+
+<section class="card">
+    <h2>Recent Activity</h2>
+    {% if recent_activity %}
+        <ul class="activity-list">
+            {% for item in recent_activity %}
+                <li>{{ item.created_at }} - {{ item.message }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No activity yet.</p>
+    {% endif %}
+</section>
+{% endblock %}

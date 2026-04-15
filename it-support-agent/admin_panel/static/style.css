@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+.topbar {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 1.2rem auto;
+    padding: 0 1rem;
+}
+
+.narrow {
+    max-width: 460px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-card form,
+.login-card form,
+form.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+select,
+button {
+    font: inherit;
+    padding: 0.55rem 0.7rem;
+}
+
+button {
+    border: 1px solid #334155;
+    background: #1d4ed8;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #d1d5db;
+    padding: 0.55rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.flash-wrap {
+    margin-bottom: 1rem;
+}
+
+.flash {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.flash.success {
+    background: #ecfdf5;
+    border-color: #86efac;
+}
+
+.flash.error {
+    background: #fef2f2;
+    border-color: #fca5a5;
+}
+
+.activity-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: #475569;
+}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card">
+    <h2>Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.full_name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>{{ user.status }}</td>
+                    <td class="actions">
+                        <a class="action-link" href="{{ url_for('reset_password', user_id=user.id) }}">Reset Password for {{ user.email }}</a>
+                        <form method="post" action="{{ url_for('toggle_status', user_id=user.id) }}">
+                            {% if user.status == 'Active' %}
+                                <button type="submit">Disable User {{ user.email }}</button>
+                            {% else %}
+                                <button type="submit">Enable User {{ user.email }}</button>
+                            {% endif %}
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

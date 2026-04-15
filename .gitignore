@@ -1,0 +1,8 @@
+it-support-agent/.env
+it-support-agent/.venv/
+it-support-agent/screenshots/
+it-support-agent/admin_panel/users.db
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
