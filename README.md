@@ -111,6 +111,3 @@ Flask Admin Panel (admin_panel/app.py)
 - Reset-password handling in demo storage is simplified and not production security design.
 - Demo credentials are hardcoded for the mock environment.
 
-## Notes
-
-This repository is a **learning/demo implementation** of IT process automation via AI + browser execution. It is ideal for experimentation, prototyping workflows, and understanding agentic automation patterns.
